@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-tw" prefix="og: http://ogp.me/ns">
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" charset="utf-8"></script>
+  <style type="text/css" media="screen">
+    img {
+      transform: rotate(180deg);
+    }
+    @keyframes fa-spin {
+      0% {
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+      }
+      100% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+    .fa-spin {
+      animation: fa-spin 1.5s infinite linear;
+    }
+    .correct {
+      transform: rotate(0deg);
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <img src="https://i.imgur.com/nm6QHHh.jpg" alt="" id='img' />
+  </center>
+
+  <script type="text/javascript">
+    $.fn.toggleEvent = function(){
+      var functions = arguments ;
+      return this.click(function(){
+        var iteration = $(this).data('iteration') || 0;
+        functions[iteration].apply(this, arguments);
+        iteration = (iteration + 1) % functions.length ;
+        $(this).data('iteration', iteration);
+      });
+    };
+
+    $('#img').toggleEvent(function(){
+      $(this).attr('class', '');
+      $(this).addClass('fa-spin');
+    }, function() {
+      $(this).attr('class', '');
+      $(this).addClass('correct');
+    });
+  </script>
+</body>
