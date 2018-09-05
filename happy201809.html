@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9</title>
+    <meta charset="utf-8">
+    <style type="text/css" media="screen">
+      body {
+        text-align: center;
+      }
+      .flipping-image {
+        display: inline-block;
+        width: 150px;
+        height: 95px;
+        margin: 0 5px;
+      }
+      .flipping-image .image { display: block; position: relative;
+        width: 150px;
+        height: 95px;
+        overflow: hidden;
+        border-radius: 9%;
+        -webkit-perspective: 1000px;
+           -moz-perspective: 1000px;
+            -ms-perspective: 1000px;
+             -o-perspective: 1000px;
+                perspective: 1000px;
+      }
+      .flipping-image .image img { width: 100%; height: auto; margin: 0; padding: 0; border: 0; display: block; }
+      .flipping-image .image .side { display: block; position: relative; z-index: 1;
+        -webkit-transition: -webkit-transform 1s ease-in-out; -webkit-backface-visibility: hidden;
+           -moz-transition:    -moz-transform 1s ease-in-out;    -moz-backface-visibility: hidden;
+            -ms-transition:     -ms-transform 1s ease-in-out;     -ms-backface-visibility: hidden;
+             -o-transition:      -o-transform 1s ease-in-out;      -o-backface-visibility: hidden;
+                transition:         transform 1s ease-in-out;         backface-visibility: hidden;
+      }
+
+
+      /* Front image */
+      .flipping-image .image .side.front {
+        width: 150px;
+        height: 95px;
+        background: center url('images/material.jpg');
+        -webkit-transform: rotateY(0);
+           -moz-transform: rotateY(0);
+            -ms-transform: rotateY(0);
+             -o-transform: rotateY(0);
+                transform: rotateY(0);
+      }
+      .flipping-image.flipped .image .front {
+        -webkit-transform: rotateY(-180deg);
+           -moz-transform: rotateY(-180deg);
+            -ms-transform: rotateY(-180deg);
+             -o-transform: rotateY(-180deg);
+                transform: rotateY(-180deg);
+      }
+
+
+      /* Back image */
+      .flipping-image .image .side.back { position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+        -webkit-transform: rotateY(180deg);
+           -moz-transform: rotateY(180deg);
+            -ms-transform: rotateY(180deg);
+             -o-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+      }
+      .flipping-image.flipped .image .back {
+        -webkit-transform: rotateY(0);
+           -moz-transform: rotateY(0);
+            -ms-transform: rotateY(0);
+             -o-transform: rotateY(0);
+                transform: rotateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="flipping-image" id="b1-1">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="images/1.png" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b1-2">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b1-3">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b1-4">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b1-5">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b1-6">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b1-7">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <br>
+      <div class="flipping-image" id="b2-1">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b2-2">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b2-3">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b2-4">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b2-5">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b2-6">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b2-7">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <br>
+      <div class="flipping-image" id="b3-1">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b3-2">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b3-3">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b3-4">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b3-5">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b3-6">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b3-7">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <br>
+      <div class="flipping-image" id="b4-1">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b4-2">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b4-3">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b4-4">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b4-5">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b4-6">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b4-7">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <br>
+      <div class="flipping-image" id="b5-1">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b5-2">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b5-3">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b5-4">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b5-5">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b5-6">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b5-7">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <br>
+      <div class="flipping-image" id="b6-1">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b6-2">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b6-3">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b6-4">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b6-5">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b6-6">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b6-7">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <br>
+      <div class="flipping-image" id="b7-1">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b7-2">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b7-3">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b7-4">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b7-5">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b7-6">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <div class="flipping-image" id="b7-7">
+        <div class="image">
+          <div class="side front" style="cursor: pointer;"></div>
+          <div class="side back"><img alt="" src="" class="full-page" style="cursor: pointer;"></div>
+        </div>
+      </div>
+      <br>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  </body>
+</html>
